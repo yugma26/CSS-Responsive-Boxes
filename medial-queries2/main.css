@@ -1,3 +1,88 @@
 body {
-  background: papayawhip;
+  background: rgba(144, 136, 136, 0.643);
+  font-size: xx-large;
+  box-sizing:border-box;
+  text-align:center bo;
+  padding: 1.5em;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-bottom: 40em;
+  margin-right: 20em;
+} 
+div{
+  /*width: 320px;*/
+  border: 2px black;
+  margin: 8px;
+  height: 50px;
+  width: 50%;
+  border-collapse: separate;
+  border-spacing: 15px;
+  border-spacing: 15px 50px;
+}
+
+.flex-container>div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  /*line-height: 75px;*/
+}
+
+.a{
+  width: 75%;
+  float: center;
+  padding: 15px;
+  border: 1px solid black;
+  line-height: 50px;
+  height: 15px;
+  }
+
+.b{
+    width: 75%;
+    height: 60px;
+    float: center;
+    padding: 15px;
+    border: 0px solid rgba(0, 0, 0, 0.175);
+    border-top:0.5px solid rgba(0, 0, 0, 0.175);
+    border-right:0.5px solid rgba(0, 0, 0, 0.175);
+    border-bottom:0.5px solid rgba(0, 0, 0, 0.175);
+    border-left:0.5px solid rgba(0, 0, 0, 0.175);
+    line-height: 150px;
+  }
+ .c{
+    width: 25%;
+    float: left;
+    padding: 15px;
+    border: 1px solid black;
+    line-height: 12.5px;
+ }
+  .d{
+    width: 25%;
+    float: center;
+    padding: 15px;
+    border: 1px solid black;
+    line-height:12.5px;
+ }
+ .e{
+    width: 25%;
+    float: right;
+    padding: 15px;
+    border: 1px solid black;
+    line-height: 12.5px;
+   }
+  .f{
+    width: 75%;
+    float: left;
+    padding: 15px;
+    border: 1px solid black;
+    line-height: 75px;
+   }
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
