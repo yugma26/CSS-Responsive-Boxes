@@ -1,88 +1,73 @@
 body {
-  background: rgba(144, 136, 136, 0.643);
-  font-size: xx-large;
-  box-sizing:border-box;
-  text-align:center bo;
-  padding: 1.5em;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-bottom: 40em;
-  margin-right: 20em;
-} 
-div{
-  /*width: 320px;*/
-  border: 2px black;
-  margin: 8px;
-  height: 50px;
-  width: 50%;
-  border-collapse: separate;
-  border-spacing: 15px;
-  border-spacing: 15px 50px;
+  background: papayawhip;
 }
 
-.flex-container>div {
+* {
+  border: 1px solid teal;
+  box-sizing: border-box;
+}
+
+.container {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-  flex-wrap:wrap;
-  /*line-height: 75px;*/
+  justify-content: space-between;
 }
 
-.a{
-  width: 75%;
-  float: center;
-  padding: 15px;
-  border: 1px solid black;
-  line-height: 50px;
-  height: 15px;
-  }
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+}
 
-.b{
-    width: 75%;
-    height: 60px;
-    float: center;
-    padding: 15px;
-    border: 0px solid rgba(0, 0, 0, 0.175);
-    border-top:0.5px solid rgba(0, 0, 0, 0.175);
-    border-right:0.5px solid rgba(0, 0, 0, 0.175);
-    border-bottom:0.5px solid rgba(0, 0, 0, 0.175);
-    border-left:0.5px solid rgba(0, 0, 0, 0.175);
-    line-height: 150px;
+header, footer, aside, .wrapper  {
+  flex-grow: 1;
+  margin: .5em;
+  max-height: 10vh;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+
+}
+
+aside > div {
+  flex-grow: 10;
+  margin: .5em;
+  /* min-width: 20vh; */
+}
+
+main {
+  width: 90%;
+  flex-grow: 3;
+  margin: .5em;
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
- .c{
-    width: 25%;
-    float: left;
-    padding: 15px;
-    border: 1px solid black;
-    line-height: 12.5px;
- }
-  .d{
-    width: 25%;
-    float: center;
-    padding: 15px;
-    border: 1px solid black;
-    line-height:12.5px;
- }
- .e{
-    width: 25%;
-    float: right;
-    padding: 15px;
-    border: 1px solid black;
-    line-height: 12.5px;
-   }
-  .f{
-    width: 75%;
-    float: left;
-    padding: 15px;
-    border: 1px solid black;
-    line-height: 75px;
-   }
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
+  header {
+    width: 100%;
+    max-height: 10vh;
+  }
+  .wrapper {
+    justify-content: stretch;
+    flex-basis: 70%;
+      min-height:  80vh;
+  }
+  footer {
+    margin: .5em;
+    flex-grow: 3;
+    min-height:  80vh;
   }
 }
